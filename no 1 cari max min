@@ -3,12 +3,13 @@
 using namespace std;
 
 int main() {
-    int max,min,jumlah,i=1,tempat;
+    int max,min,jumlah,i=1,tempat,lokasi;
     cout << "masukan jumlah angka : ";
     cin >> jumlah;
     
     int array[jumlah];
-    cout << " masukan " << jumlah << " angka\n";
+    cout <<endl;
+    cout << "masukan " << jumlah << " angka\n";
     
     for(i=0;i<jumlah;i++) {
        cout << "angka ke-" << i+1 << ": ";
@@ -18,7 +19,7 @@ int main() {
     for (i=0;i<jumlah;i++) {
         if (array[i] > max) {
             max=array[i];
-            tempat=i+1;
+            lokasi=i+1;
         }
     }
     min=array[0];
@@ -28,6 +29,6 @@ int main() {
             tempat=i+1;
         }
     }
-    cout << "nilai max adalah " << max << " berada di tempat ke-" << tempat << endl;
+    cout << "nilai max adalah " << max << " berada di tempat ke-" << lokasi << endl;
     cout << "nilai min adalah " << min << " berada di tempat ke-" << tempat << endl;
 }
