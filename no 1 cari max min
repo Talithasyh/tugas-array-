@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int max,min,jumlah,i=1,tempat;
+    cout << "masukan jumlah angka : ";
+    cin >> jumlah;
+    
+    int array[jumlah];
+    cout << " masukan " << jumlah << " angka\n";
+    
+    for(i=0;i<jumlah;i++) {
+       cout << "angka ke-" << i+1 << ": ";
+       cin >> array[i];
+    }
+    max=array[0];
+    for (i=0;i<jumlah;i++) {
+        if (array[i] > max) {
+            max=array[i];
+            tempat=i+1;
+        }
+    }
+    min=array[0];
+    for (i=0;i<jumlah;i++) {
+        if (array[i] < min) {
+            min=array[i];
+            tempat=i+1;
+        }
+    }
+    cout << "nilai max adalah " << max << " berada di tempat ke-" << tempat << endl;
+    cout << "nilai min adalah " << min << " berada di tempat ke-" << tempat << endl;
+}
